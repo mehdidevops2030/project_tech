@@ -1,3 +1,8 @@
+Note ;- in case of package installation yum issue.
+vi /etc/yum/pluginconf.d/subscription-manager.conf
+changed it to 0 from 1
+enabled=0
+
 #shell script for installing docker based on OS
 #!/bin/sh
 
