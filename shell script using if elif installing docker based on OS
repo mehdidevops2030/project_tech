@@ -1,10 +1,13 @@
-shell script for installing docker based on OS 
+#shell script for installing docker based on OS
 #!/bin/sh
+
 
 value=$(grep -ioP '^NAME=\K.+' /etc/os-release)
 echo $value
 if [[ "$value" == *"Red Hat Enterprise Linux"* ]]
 then
+        echo "Installing docker"
+
         sudo yum install -y yum-utils
         sudo yum-config-manager \
         --add-repo \
