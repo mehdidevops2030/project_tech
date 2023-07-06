@@ -3,11 +3,15 @@ shell script for installing docker based on OS
 
 value=$(grep -ioP '^NAME=\K.+' /etc/os-release)
 echo $value
-if [[ "$value" == *"RHEL"* ]]
+if [[ "$value" == *"Red Hat Enterprise Linux"* ]]
 then
-        echo "Installing docker"
-        sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
+        sudo yum install -y yum-utils
+        sudo yum-config-manager \
+        --add-repo \
+        https://download.docker.com/linux/centos/docker-ce.repo
+        sudo yum install docker-ce docker-ce-cli containerd.io
+        sudo systemctl enable docker.service
+        sudo systemctl start docker.service
 elif [[ "$value" == *"Ubuntu"* ]]
 then
         echo "from 2nd elif Installing docker"
