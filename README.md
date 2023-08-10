@@ -1,5 +1,5 @@
 # project_tech
-To created a cluster using Terraform  i used this files  main.tf and varibale.tf to create the cluster
+To create a cluster using Terraform  i used this files  main.tf and varibale.tf
 copy this two files do the changes like region and credentails .
 terraform init
 terraform plan
