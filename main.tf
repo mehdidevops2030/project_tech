@@ -1,9 +1,3 @@
-ubuntu@ip-172-31-33-22:~/eks-demo$ ls
-eksplan  main.tf  main.tf_bp  terraform.tfstate  terraform.tfstate.backup  variables.tf
-ubuntu@ip-172-31-33-22:~/eks-demo$ cat main.tf
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
-
 terraform {
 
   required_providers {
@@ -33,8 +27,6 @@ terraform {
 
 provider "aws" {
   region = "ap-south-1"
-  access_key = "***"
-  secret_key = "**"
 }
 
 data "aws_availability_zones" "available" {}
