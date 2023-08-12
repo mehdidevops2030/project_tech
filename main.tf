@@ -26,7 +26,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "ap-south-1"
+  region = "us-east-2"
   access_key = "AKIASA3OFRNFOW7QD3GR"
   secret_key = "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"
 }
@@ -92,7 +92,7 @@ module "eks" {
       instance_types = ["t2.micro"]
 
       min_size     = 1
-      max_size     = 2
+      max_size     = 1
       desired_size = 1
     }
   }
