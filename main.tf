@@ -27,8 +27,7 @@ terraform {
 
 provider "aws" {
   region = "ap-south-1"
-  access_key = "AKIA5OVB3MWMUARK36GW"
-  secret_key = "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"
+
 }
 
 data "aws_availability_zones" "available" {}
